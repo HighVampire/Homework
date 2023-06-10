@@ -12,6 +12,3 @@ if (num1 > num2)
    {
        Console.WriteLine ($"{num2} больше {num1}");
    }
-
-// Задача 4
-
