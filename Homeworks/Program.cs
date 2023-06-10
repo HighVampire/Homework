@@ -15,19 +15,32 @@
 
 ﻿// Задача 4
 
-Console.Write ("Введите 1-ое целое число ");
+// Console.Write ("Введите 1-ое целое число ");
+// int num1 = Convert.ToInt32 (Console.ReadLine());
+// Console.Write ("Введите 2-ое целое число ");
+// int num2 = Convert.ToInt32 (Console.ReadLine());
+// Console.Write ("Введите 3-ье целое число ");
+// int num3 = Convert.ToInt32 (Console.ReadLine());
+// int max = num1;
+// if (num2 > max)
+//    {
+//     max = num2;
+//    }
+// if (num3 > max)
+//    {
+//     max = num3;
+//    }
+// Console.Write ($"Максимальное число из 3-х -> {max}");
+
+// Задача 6
+
+Console.Write ("Введите целое число ");
 int num1 = Convert.ToInt32 (Console.ReadLine());
-Console.Write ("Введите 2-ое целое число ");
-int num2 = Convert.ToInt32 (Console.ReadLine());
-Console.Write ("Введите 3-ье целое число ");
-int num3 = Convert.ToInt32 (Console.ReadLine());
-int max = num1;
-if (num2 > max)
+if (num1 % 2 == 0)
    {
-    max = num2;
+    Console.Write ($"{num1} -> Число чётное");
    }
-if (num3 > max)
+else
    {
-    max = num3;
+    Console.Write ($"{num1} -> Число нечётное");
    }
-Console.Write ($"Максимальное число из 3-х -> {max}");
