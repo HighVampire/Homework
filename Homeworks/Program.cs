@@ -108,3 +108,24 @@
 // System.Console.WriteLine ($"A ({xa},{ya},{za}); B ({xb},{yb},{zb}) -> {Distance_3D(xa,ya,za,xb,yb,zb)}");
 
 // Задача 23
+
+
+void TablOfSquaresN (int N)
+{
+   int count = 1;
+    while (count <= N)
+    {
+      System.Console.WriteLine($"{count} -> ");
+      int count1 = 1;
+      while (count1 <= count)
+      {
+         System.Console.Write($"{count1 * count1}, ");
+         count1 ++;
+      }
+     count ++; 
+    }
+}
+
+System.Console.WriteLine("Введите число N");
+int N = Convert.ToInt32 (System.Console.ReadLine ());
+TablOfSquaresN (N);
