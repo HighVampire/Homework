@@ -87,4 +87,24 @@
 
 // Задача 21
 
+// double Distance_3D(double xa, double ya, double za, double xb, double yb, double zb)
+//    {
+//       return Math.Sqrt (Math.Pow (xb - xa, 2) + Math.Pow (yb - ya, 2) + Math.Pow (zb - za, 2));
+//    }
+
+// System.Console.WriteLine("Введите координату x первой точки");
+// double xa = Convert.ToDouble (System.Console.ReadLine ());
+// System.Console.WriteLine("Введите координату y первой точки");
+// double ya = Convert.ToDouble (System.Console.ReadLine ());
+// System.Console.WriteLine("Введите координату z первой точки");
+// double za = Convert.ToDouble (System.Console.ReadLine ());
+// System.Console.WriteLine("Введите координату x второй точки");
+// double xb = Convert.ToDouble (System.Console.ReadLine ());
+// System.Console.WriteLine("Введите координату y второй точки");
+// double yb = Convert.ToDouble (System.Console.ReadLine ());
+// System.Console.WriteLine("Введите координату z второй точки");
+// double zb = Convert.ToDouble (System.Console.ReadLine ());
+
+// System.Console.WriteLine ($"A ({xa},{ya},{za}); B ({xb},{yb},{zb}) -> {Distance_3D(xa,ya,za,xb,yb,zb)}");
+
 // Задача 23
