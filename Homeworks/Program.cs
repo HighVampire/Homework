@@ -47,14 +47,14 @@
 
 // Задача 8
 
-Console.Write ("Введите целое число ");
-int num = Convert.ToInt32 (Console.ReadLine());
-int count = 1;
-Console.WriteLine ($"Все четные числа от 1 до {num}: ");
-while (count <= num)
-    {
-    if (count % 2 == 0)
-       {   
-        Console.Write ($" {count}");
-       }
-    count ++;}
+// Console.Write ("Введите целое число ");
+// int num = Convert.ToInt32 (Console.ReadLine());
+// int count = 1;
+// Console.WriteLine ($"Все четные числа от 1 до {num}: ");
+// while (count <= num)
+//     {
+//     if (count % 2 == 0)
+//        {   
+//         Console.Write ($" {count}");
+//        }
+//     count ++;}
