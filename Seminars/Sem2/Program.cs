@@ -87,3 +87,4 @@ void CheckSquare (int num1, int num2)
     }
 }
 
+CheckSquare (3, 8);

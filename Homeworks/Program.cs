@@ -1,4 +1,6 @@
-﻿// Задача 2
+﻿// Seminar №1
+
+// Задача 2
 
 // Console.Write ("Введите 1-ое целое число для сравнения ");
 // int num1 = Convert.ToInt32 (Console.ReadLine());
@@ -13,7 +15,7 @@
 //        Console.WriteLine ($"{num2} больше {num1}");
 //    }
 
-﻿// Задача 4
+// Задача 4
 
 // Console.Write ("Введите 1-ое целое число ");
 // int num1 = Convert.ToInt32 (Console.ReadLine());
@@ -58,3 +60,31 @@
 //         Console.Write ($" {count}");
 //        }
 //     count ++;}
+
+
+
+//Seminar №3
+
+// Задача 19
+
+
+// void Palindrome_5 (int num)
+// {
+//     if (num / 10000 == num % 10 && (num / 1000) % 10 == (num % 100)/10)
+//     {
+//         System.Console.WriteLine($"{num} -> да");
+//     }
+//     else
+//     {
+//        System.Console.WriteLine($"{num} -> нет"); 
+//     }
+// }
+
+// System.Console.WriteLine("Введите 5-и значное число, для проверки является ли оно палиндромом");
+// int num = Convert.ToInt32 (System.Console.ReadLine ());
+// Palindrome_5 (num);
+
+
+// Задача 21
+
+// Задача 23
