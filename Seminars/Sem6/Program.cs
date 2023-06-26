@@ -51,3 +51,92 @@
 
 // myArray = ReverseArray(myArray);
 // PrintArray(myArray);
+
+// перевод в двоичную числа
+
+// string DecimalToBinary(int num)
+// {
+//     string result = string.Empty;
+//     while(num > 0)
+//     {
+//         result = num % 2 + result ;
+//         num = num / 2;
+//     }
+//     return result;
+// }
+
+
+// System.Console.WriteLine("Input number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// System.Console.WriteLine($"Number {num} in binary system -> {DecimalToBinary(num)}");
+
+
+//Задача 3. Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: a и b.
+//числа фибоначчи последовательность чисел в которой первые 2 числа это 0 и 1, а последубщие это сумма двух передыдущих
+//[0, 1,2, 3, 5, 8, 13, ... ]
+
+
+// void Fibannachi (int size, int a, int b)
+// {
+//     int[] array = new int[size];
+//     array[0] = a;
+//     array[1] = b;
+//     int i = 2;
+//     while (i < size)
+//     {
+//         array[i] = array[i-1]+array[i-2];
+//         i++; 
+//     }
+//     System.Console.WriteLine();
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// System.Console.WriteLine("Input fibonachi lenght: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Input a: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Input b: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+
+
+// PrintArray (Fibannachi (size, a, b));
+
+// int [] Fibanacci( int size , int num1, int num2)
+// {
+//     int [] array = new int [size];
+//     array[0] = num1;
+//     array[1] = num2;
+//     for (int i=2 ; i< array.Length; i++)
+//     {
+//       array [i] = array[(i-1)]+array[(i-2)];
+//     }
+  
+//    return array;
+// }
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// System.Console.WriteLine("Input num1: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Input num2: ");
+//  int num2 = Convert.ToInt32(Console.ReadLine());  
+//  PrintArray(Fibanacci (10,num1, num2));
+
+
+//Задача 2.Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+//самое важное знать правило, какждая сторона должна быть меньше(строго) суммы двух других сторон

@@ -110,23 +110,63 @@
 // Задача 23
 
 
-void TablOfSquaresN (int N)
+// void TablOfSquaresN (int N)
+// {
+//    int count = 1;
+//     while (count <= N)
+//     {    
+//       System.Console.Write($"{count} -> ");
+//       int count1 = 1;
+//       while (count1 <= count)
+//       {
+//          System.Console.Write($"{count1 * count1},");
+//          count1 ++;
+//       }
+//      count ++;
+//      System.Console.WriteLine(";"); 
+//     }
+// }
+
+// System.Console.Write ("Введите число N: ");
+// int N = Convert.ToInt32 (System.Console.ReadLine ());
+// TablOfSquaresN (N);
+
+// Задача 34
+
+
+int[] CreateRandomArray()
 {
-   int count = 1;
-    while (count <= N)
-    {    
-      System.Console.Write($"{count} -> ");
-      int count1 = 1;
-      while (count1 <= count)
-      {
-         System.Console.Write($"{count1 * count1},");
-         count1 ++;
-      }
-     count ++;
-     System.Console.WriteLine(";"); 
+    int[] array = new int[3];
+    for (int i = 0; i < 3; i++)
+    {
+        array[i] = new Random().Next(100, 999);
     }
+    return array;
 }
 
-System.Console.Write ("Введите число N: ");
-int N = Convert.ToInt32 (System.Console.ReadLine ());
-TablOfSquaresN (N);
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write(array[i] + " ");
+    }
+    System.Console.WriteLine();
+}
+
+int CheckEven (int[] array)
+{  
+   int count = 0;
+   for (int i = 0; i < 3; i ++)
+   {
+        if (array[i] % 2 == 0)
+        {
+         count ++;
+        }
+   }
+   return count;      
+}
+
+int[] array = CreateRandomArray();
+PrintArray (array);
+CheckEven (array);
+
