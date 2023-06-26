@@ -150,7 +150,6 @@
 //     {
 //         System.Console.Write(array[i] + " ");
 //     }
-//     System.Console.WriteLine();
 // }
 
 // int CheckEven (int[] array)
@@ -170,8 +169,9 @@
 // System.Console.WriteLine ("Input lenght of array");
 // int size = Convert.ToInt32 (Console.ReadLine());
 // int[] array = CreateRandomArray (size);
+// System.Console.Write ("[");
 // PrintArray (array);
-// System.Console.WriteLine ($"In array {CheckEven (array)} even numbers");
+// System.Console.Write ($"] -> {CheckEven (array)}");
 
 
 // Задача 36
@@ -193,7 +193,6 @@
 //     {
 //         System.Console.Write(array[i] + " ");
 //     }
-//     System.Console.WriteLine();
 // }
 
 // int SumOfUnevenPosition (int[] array)
@@ -212,8 +211,9 @@
 // System.Console.WriteLine ("Input lenght of array");
 // int size = Convert.ToInt32 (Console.ReadLine());
 // int[] array = CreateRandomArray (size);
+// System.Console.Write ("[");
 // PrintArray (array);
-// System.Console.WriteLine ($"Sum of numbers on uneven position in array -> {SumOfUnevenPosition (array)}");
+// System.Console.Write ($"] -> {SumOfUnevenPosition (array)}");
 
 
 // Задача 38
