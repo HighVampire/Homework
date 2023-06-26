@@ -134,39 +134,84 @@
 // Задача 34
 
 
-int[] CreateRandomArray()
-{
-    int[] array = new int[3];
-    for (int i = 0; i < 3; i++)
-    {
-        array[i] = new Random().Next(100, 999);
-    }
-    return array;
-}
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(100, 999);
+//     }
+//     return array;
+// }
 
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        System.Console.Write(array[i] + " ");
-    }
-    System.Console.WriteLine();
-}
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
 
-int CheckEven (int[] array)
-{  
-   int count = 0;
-   for (int i = 0; i < 3; i ++)
-   {
-        if (array[i] % 2 == 0)
-        {
-         count ++;
-        }
-   }
-   return count;      
-}
+// int CheckEven (int[] array)
+// {  
+//    int count = 0;
+//    for (int i = 0; i < array.Length; i ++)
+//    {
+//         if (array[i] % 2 == 0)
+//         {
+//          count ++;
+//         }
+//    }
+//    return count;      
+// }
 
-int[] array = CreateRandomArray();
-PrintArray (array);
-CheckEven (array);
+
+// System.Console.WriteLine ("Input lenght of array");
+// int size = Convert.ToInt32 (Console.ReadLine());
+// int[] array = CreateRandomArray (size);
+// PrintArray (array);
+// System.Console.WriteLine ($"In array {CheckEven (array)} even numbers");
+
+
+// Задача 36
+
+
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(-100, 100);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// int SumOfUnevenPosition (int[] array)
+// {  
+//    int sum = 0; 
+//    for (int i = 0; i < array.Length; i ++)
+//    {
+//         if (i % 2 != 0)
+//         {
+//          sum = sum + array[i];
+//         }
+//    }
+//    return sum;      
+// }
+
+// System.Console.WriteLine ("Input lenght of array");
+// int size = Convert.ToInt32 (Console.ReadLine());
+// int[] array = CreateRandomArray (size);
+// PrintArray (array);
+// System.Console.WriteLine ($"Sum of numbers on uneven position in array -> {SumOfUnevenPosition (array)}");
 
