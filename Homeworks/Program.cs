@@ -223,8 +223,7 @@ double[] CreateRandomArray(int size, int minValue, int maxValue)
    double[] array = new double[size];
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random ().Next(minValue, maxValue) + new Random ().NextDouble();
-        array[i] = Math.Round(array[i], 2);
+        array[i] = Math.Round ((new Random ().Next(minValue, maxValue) + new Random ().NextDouble()), 2);
     }
     return array;
 }
