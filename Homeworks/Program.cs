@@ -270,21 +270,66 @@
 
 // Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
-double [,] Create2DArray (int m, int n, int minValue, int maxValue)
+// double [,] Create2DArray (int m, int n, int minValue, int maxValue)
+// {
+//     double [,] array = new double [m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             array[i,j] = Math.Round ((new Random ().Next(minValue, maxValue) + new Random ().NextDouble()), 1);
+//         }
+
+//     }
+//     return array;
+// }
+
+// void Print2DArray(double [,] array)
+// {
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (1); j++)
+//         {
+//             System.Console.Write (array[i,j] + " ");
+//         }
+//         System.Console.WriteLine();
+
+//     }
+// }
+// System.Console.Write ("Input number of rows in array ");
+// int m = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number of columns in array ");
+// int n = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input min value of number in array ");
+// int minValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input max value of number in array ");
+// int maxValue = Convert.ToInt32 (Console.ReadLine());
+
+// System.Console.WriteLine ($"m={m}, n={n}.");
+// double[,] myArray = Create2DArray(m, n, minValue, maxValue);
+// Create2DArray (m, n, minValue, maxValue);
+// Print2DArray (myArray);
+
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
+// и возвращает значение этого элемента или же указание, что такого элемента нет.
+
+
+int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
 {
-    double [,] array = new double [m, n];
-    for (int i = 0; i < m; i++)
+    int[,] array = new int [rows, columns];
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < columns; j++)
         {
-            array[i,j] = Math.Round ((new Random ().Next(minValue, maxValue) + new Random ().NextDouble()), 1);
+            array [i,j] = new Random().Next(minValue,maxValue);
         }
 
     }
     return array;
 }
 
-void Print2DArray(double [,] array)
+void Print2DArray(int [,] array)
 {
     for (int i = 0; i < array.GetLength (0); i++)
     {
@@ -296,6 +341,28 @@ void Print2DArray(double [,] array)
 
     }
 }
+
+int SearchByPosition (int x, int y, int[,] array)
+{
+    int res = 0;
+    if (x <= array.GetLength (0) - 1 | y <= array.GetLength (1) - 1)
+        {
+        for (int i = 0; i < array.GetLength (0); i++)
+            {
+            for (int j = 0; j < array.GetLength (1); j++)
+                {
+                    if (i == x && j == y)
+                    {
+                       res = array[i,j];
+                       System.Console.WriteLine (res); 
+                    }
+                }
+            }        
+        }     
+    else System.Console.WriteLine("Invalid position");
+    return res;
+}
+
 System.Console.Write ("Input number of rows in array ");
 int m = Convert.ToInt32 (Console.ReadLine());
 System.Console.Write ("Input number of columns in array ");
@@ -304,11 +371,12 @@ System.Console.Write ("Input min value of number in array ");
 int minValue = Convert.ToInt32 (Console.ReadLine());
 System.Console.Write ("Input max value of number in array ");
 int maxValue = Convert.ToInt32 (Console.ReadLine());
+System.Console.Write ("Input x position in array ");
+int x = Convert.ToInt32 (Console.ReadLine());
+System.Console.Write ("Input y position in array ");
+int y = Convert.ToInt32 (Console.ReadLine());
 
-System.Console.WriteLine ($"m={m}, n={n}.");
-double[,] myArray = Create2DArray(m, n, minValue, maxValue);
+int[,] myArray = Create2DArray(m, n, minValue, maxValue);
 Create2DArray (m, n, minValue, maxValue);
 Print2DArray (myArray);
-
-
-
+SearchByPosition(x, y, myArray);
