@@ -315,6 +315,78 @@
 // и возвращает значение этого элемента или же указание, что такого элемента нет.
 
 
+// int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
+// {
+//     int[,] array = new int [rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             array [i,j] = new Random().Next(minValue,maxValue);
+//         }
+
+//     }
+//     return array;
+// }
+
+// void Print2DArray(int [,] array)
+// {
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (1); j++)
+//         {
+//             System.Console.Write (array[i,j] + " ");
+//         }
+//         System.Console.WriteLine();
+
+//     }
+// }
+
+// int SearchByPosition (int x, int y, int[,] array)
+// {
+//     int res = 0;
+//     if (x <= array.GetLength (0) - 1 | y <= array.GetLength (1) - 1)
+//         {
+//         for (int i = 0; i < array.GetLength (0); i++)
+//             {
+//             for (int j = 0; j < array.GetLength (1); j++)
+//                 {
+//                     if (i == x && j == y)
+//                     {
+//                        res = array[i,j];
+//                        System.Console.WriteLine (res); 
+//                     }
+//                 }
+//             }        
+//         }     
+//     else System.Console.WriteLine($"{x}{y} -> такого числа в массиве нет");
+//     return res;
+// }
+
+// System.Console.Write ("Input number of rows in array ");
+// int m = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number of columns in array ");
+// int n = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input min value of number in array ");
+// int minValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input max value of number in array ");
+// int maxValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input x position in array ");
+// int x = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input y position in array ");
+// int y = Convert.ToInt32 (Console.ReadLine());
+
+// int[,] myArray = Create2DArray(m, n, minValue, maxValue);
+// Create2DArray (m, n, minValue, maxValue);
+// Print2DArray (myArray);
+// SearchByPosition(x, y, myArray);
+
+
+
+// Задача 52. Задайте двумерный массив из целых чисел. 
+// Найдите среднее арифметическое элементов в каждом столбце.
+
+
 int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
 {
     int[,] array = new int [rows, columns];
@@ -342,25 +414,19 @@ void Print2DArray(int [,] array)
     }
 }
 
-int SearchByPosition (int x, int y, int[,] array)
+int ArithmeticMean (int [,] array)
 {
-    int res = 0;
-    if (x <= array.GetLength (0) - 1 | y <= array.GetLength (1) - 1)
+    double sum = 0;
+    for (int i = 0; i < array.GetLength (1); i++)
+    {
+        for (int j = 0; j < array.GetLength (0); j++)
         {
-        for (int i = 0; i < array.GetLength (0); i++)
-            {
-            for (int j = 0; j < array.GetLength (1); j++)
-                {
-                    if (i == x && j == y)
-                    {
-                       res = array[i,j];
-                       System.Console.WriteLine (res); 
-                    }
-                }
-            }        
-        }     
-    else System.Console.WriteLine("Invalid position");
-    return res;
+            sum = sum + array[j,i];
+        }
+        System.Console.Write($" {Math.Round(sum / array.GetLength(0),1)} ");
+        sum = 0;
+    }
+    return 0;
 }
 
 System.Console.Write ("Input number of rows in array ");
@@ -371,12 +437,8 @@ System.Console.Write ("Input min value of number in array ");
 int minValue = Convert.ToInt32 (Console.ReadLine());
 System.Console.Write ("Input max value of number in array ");
 int maxValue = Convert.ToInt32 (Console.ReadLine());
-System.Console.Write ("Input x position in array ");
-int x = Convert.ToInt32 (Console.ReadLine());
-System.Console.Write ("Input y position in array ");
-int y = Convert.ToInt32 (Console.ReadLine());
 
 int[,] myArray = Create2DArray(m, n, minValue, maxValue);
 Create2DArray (m, n, minValue, maxValue);
 Print2DArray (myArray);
-SearchByPosition(x, y, myArray);
+ArithmeticMean(myArray);
