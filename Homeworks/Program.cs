@@ -218,52 +218,97 @@
 
 // Задача 38
 
-double[] CreateRandomArray(int size, int minValue, int maxValue)
+// double[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+//    double[] array = new double[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = Math.Round ((new Random ().Next(minValue, maxValue) + new Random ().NextDouble()), 2);
+//     }
+//     return array;
+// }
+
+// void PrintArray(double[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+// }
+
+// double MaxInArray(double[] array)
+// {
+//    double max = array[0];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//       if (array[i] > max)
+//       max = array[i];
+//     }
+//     return max;
+// }
+// double MinInArray(double[] array)
+// {
+//    double min = array[0];
+//    for (int i = 0; i < array.Length; i++)
+//     {
+//       if (array[i] < min)
+//       min = array[i];
+//     }
+//     return min;
+// }
+// System.Console.Write ("Input lenght of array ");
+// int size = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input min value of number in array ");
+// int minValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input max value of number in array ");
+// int maxValue = Convert.ToInt32 (Console.ReadLine());
+
+// double[] array = CreateRandomArray(size, minValue, maxValue);
+// System.Console.Write ($"[");
+// PrintArray(array);
+// System.Console.Write ($"] => {MaxInArray(array)} - {MinInArray(array)} = {Math.Round(MaxInArray(array) - MinInArray(array), 2)}");
+
+// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+
+double [,] Create2DArray (int m, int n, int minValue, int maxValue)
 {
-   double[] array = new double[size];
-    for (int i = 0; i < size; i++)
+    double [,] array = new double [m, n];
+    for (int i = 0; i < m; i++)
     {
-        array[i] = Math.Round ((new Random ().Next(minValue, maxValue) + new Random ().NextDouble()), 2);
+        for (int j = 0; j < n; j++)
+        {
+            array[i,j] = Math.Round ((new Random ().Next(minValue, maxValue) + new Random ().NextDouble()), 1);
+        }
+
     }
     return array;
 }
 
-void PrintArray(double[] array)
+void Print2DArray(double [,] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.GetLength (0); i++)
     {
-        System.Console.Write(array[i] + " ");
-    }
-}
+        for (int j = 0; j < array.GetLength (1); j++)
+        {
+            System.Console.Write (array[i,j] + " ");
+        }
+        System.Console.WriteLine();
 
-double MaxInArray(double[] array)
-{
-   double max = array[0];
-    for (int i = 0; i < array.Length; i++)
-    {
-      if (array[i] > max)
-      max = array[i];
     }
-    return max;
 }
-double MinInArray(double[] array)
-{
-   double min = array[0];
-   for (int i = 0; i < array.Length; i++)
-    {
-      if (array[i] < min)
-      min = array[i];
-    }
-    return min;
-}
-System.Console.Write ("Input lenght of array ");
-int size = Convert.ToInt32 (Console.ReadLine());
+System.Console.Write ("Input number of rows in array ");
+int m = Convert.ToInt32 (Console.ReadLine());
+System.Console.Write ("Input number of columns in array ");
+int n = Convert.ToInt32 (Console.ReadLine());
 System.Console.Write ("Input min value of number in array ");
 int minValue = Convert.ToInt32 (Console.ReadLine());
 System.Console.Write ("Input max value of number in array ");
 int maxValue = Convert.ToInt32 (Console.ReadLine());
 
-double[] array = CreateRandomArray(size, minValue, maxValue);
-System.Console.Write ($"[");
-PrintArray(array);
-System.Console.Write ($"] => {MaxInArray(array)} - {MinInArray(array)} = {Math.Round(MaxInArray(array) - MinInArray(array), 2)}");
+System.Console.WriteLine ($"m={m}, n={n}.");
+double[,] myArray = Create2DArray(m, n, minValue, maxValue);
+Create2DArray (m, n, minValue, maxValue);
+Print2DArray (myArray);
+
+
+
