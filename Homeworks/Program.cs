@@ -387,58 +387,255 @@
 // Найдите среднее арифметическое элементов в каждом столбце.
 
 
-int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
-{
-    int[,] array = new int [rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            array [i,j] = new Random().Next(minValue,maxValue);
-        }
+// int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
+// {
+//     int[,] array = new int [rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             array [i,j] = new Random().Next(minValue,maxValue);
+//         }
 
-    }
-    return array;
-}
+//     }
+//     return array;
+// }
 
-void Print2DArray(int [,] array)
-{
-    for (int i = 0; i < array.GetLength (0); i++)
-    {
-        for (int j = 0; j < array.GetLength (1); j++)
-        {
-            System.Console.Write (array[i,j] + " ");
-        }
-        System.Console.WriteLine();
+// void Print2DArray(int [,] array)
+// {
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (1); j++)
+//         {
+//             System.Console.Write (array[i,j] + " ");
+//         }
+//         System.Console.WriteLine();
 
-    }
-}
+//     }
+// }
 
-int ArithmeticMean (int [,] array)
-{
-    double sum = 0;
-    for (int i = 0; i < array.GetLength (1); i++)
-    {
-        for (int j = 0; j < array.GetLength (0); j++)
-        {
-            sum = sum + array[j,i];
-        }
-        System.Console.Write($" {Math.Round(sum / array.GetLength(0),1)} ");
-        sum = 0;
-    }
-    return 0;
-}
+// int ArithmeticMean (int [,] array)
+// {
+//     double sum = 0;
+//     for (int i = 0; i < array.GetLength (1); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (0); j++)
+//         {
+//             sum = sum + array[j,i];
+//         }
+//         System.Console.Write($" {Math.Round(sum / array.GetLength(0),1)} ");
+//         sum = 0;
+//     }
+//     return 0;
+// }
 
-System.Console.Write ("Input number of rows in array ");
-int m = Convert.ToInt32 (Console.ReadLine());
-System.Console.Write ("Input number of columns in array ");
-int n = Convert.ToInt32 (Console.ReadLine());
-System.Console.Write ("Input min value of number in array ");
-int minValue = Convert.ToInt32 (Console.ReadLine());
-System.Console.Write ("Input max value of number in array ");
-int maxValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number of rows in array ");
+// int m = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number of columns in array ");
+// int n = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input min value of number in array ");
+// int minValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input max value of number in array ");
+// int maxValue = Convert.ToInt32 (Console.ReadLine());
 
-int[,] myArray = Create2DArray(m, n, minValue, maxValue);
-Create2DArray (m, n, minValue, maxValue);
-Print2DArray (myArray);
-ArithmeticMean(myArray);
+// int[,] myArray = Create2DArray(m, n, minValue, maxValue);
+// Create2DArray (m, n, minValue, maxValue);
+// Print2DArray (myArray);
+// ArithmeticMean(myArray);
+
+
+// Задача 54: Задайте двумерный массив. Напишите программу,
+// которая упорядочит по убыванию элементы каждой строки двумерного массива.
+
+
+
+// void SortMinToMaxRow (int [,] array)
+// {
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         int end = array.GetLength (1) - 1;
+//         while (end > 0)
+//         {
+//             int temp = 0;
+//             for (int j = 0; j < end; j++)
+//             {
+//                 if (array[i,j+1] < array[i,j])
+//                 {
+//                     temp = array[i,j+1];
+//                     array[i,j+1] = array[i,j];
+//                     array[i,j] = temp;
+//                 }
+//             }
+//             end--;
+//         }    
+//     }
+// }
+
+// System.Console.Write ("Input number of rows in array ");
+// int m = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number of columns in array ");
+// int n = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input min value of number in array ");
+// int minValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input max value of number in array ");
+// int maxValue = Convert.ToInt32 (Console.ReadLine());
+
+// int[,] myArray = Create2DArray(m, n, minValue, maxValue);
+// Create2DArray (m, n, minValue, maxValue);
+// Print2DArray (myArray);
+// SortMinToMaxRow(myArray);
+// System.Console.WriteLine();
+// Print2DArray (myArray);
+
+// Задача 56: Задайте прямоугольный двумерный массив. 
+// Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+
+// int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
+// {
+//     int[,] array = new int [rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             array [i,j] = new Random().Next(minValue,maxValue);
+//         }
+
+//     }
+//     return array;
+// }
+
+// void Print2DArray(int [,] array)
+// {
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (1); j++)
+//         {
+//             System.Console.Write (array[i,j] + " ");
+//         }
+//         System.Console.WriteLine();
+
+//     }
+// }
+
+// int SumOfRow (int [,] array)
+// {   
+//     int sum = 0;
+//     for (int j = 0; j < array.GetLength (1); j++)
+//         {
+//             sum += array[0,j];
+//         }   
+// return sum;
+// }
+
+
+// int SearchMinRow (int [,] array, int SumOfRow)
+// {
+//     int minrow = 0;
+//     int sum = SumOfRow;
+//     int tempsum = 0;
+//     int j = 0;
+//     for (int i = 1; i < array.GetLength (0); i++)
+//     {
+        
+//         while ( j < array.GetLength (1))
+//             {
+//                 tempsum =+ array[i,j];
+//                 j++;
+//             }           
+//         if (tempsum < sum)
+//             {
+//                 sum = tempsum;
+//                 minrow = i;
+//             }
+//     j = 0;
+//     }
+//     return minrow;
+// }
+
+
+// System.Console.WriteLine ("Input number of rows and columns, but they cant be equall ");
+// System.Console.WriteLine ("Rows");
+// int m = Convert.ToInt32 (Console.ReadLine());
+// System.Console.WriteLine ("Columns");
+// int n = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input min value of number in array ");
+// int minValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input max value of number in array ");
+// int maxValue = Convert.ToInt32 (Console.ReadLine());
+
+// int[,] myArray = Create2DArray(m, n, minValue, maxValue);
+// Create2DArray (m, n, minValue, maxValue);
+// Print2DArray (myArray);
+// System.Console.WriteLine ($"{SearchMinRow (myArray, SumOfRow(myArray))} row");
+
+
+
+// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+
+// int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
+// {
+//     int[,] array = new int [rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             array [i,j] = new Random().Next(minValue,maxValue);
+//         }
+
+//     }
+//     return array;
+// }
+
+// void Print2DArray(int [,] array)
+// {
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (1); j++)
+//         {
+//             System.Console.Write (array[i,j] + " ");
+//         }
+//         System.Console.WriteLine();
+
+//     }
+// }
+
+// int [,] ProductOfArrays (int [,] myArray1, int [,] myArray2, int m, int n)
+// {
+//     int [,] productArray = new int [m,n];
+//     for (int i = 0; i < myArray1.GetLength(0); i++)
+//                 {
+//                     for (int j = 0; j < myArray2.GetLength(1); j++)
+//                     {
+//                         for (int k = 0; k < myArray2.GetLength(0); k++)
+//                         {
+//                             productArray[i,j] += myArray1[i,k] * myArray2[k,j];
+//                         }
+//                     }
+//                 }
+
+//     return productArray;
+// }
+
+// System.Console.Write ("Input number of rows in array ");
+// int m = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number of columns in array ");
+// int n = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input min value of number in array ");
+// int minValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input max value of number in array ");
+// int maxValue = Convert.ToInt32 (Console.ReadLine());
+
+// int[,] myArray1 = Create2DArray(m, n, minValue, maxValue);
+// int[,] myArray2 = Create2DArray(m, n, minValue, maxValue);
+// Print2DArray (myArray1);
+// System.Console.WriteLine ();
+// Print2DArray (myArray2);
+// System.Console.WriteLine ();
+// Print2DArray (ProductOfArrays (myArray1, myArray2, m, n));
+
+
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+
+
+// Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4. 
