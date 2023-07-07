@@ -638,4 +638,50 @@
 // Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 
 
+// int [,,] Create3DArray (int rows, int columns, int layers, int minValue, int maxValue)
+// {
+//     int[,,] array = new int [rows, columns, layers];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             for (int f = 0; f < layers; f++)
+//             {
+//                 array [i,j,f] = new Random().Next(minValue,maxValue);
+//             }
+//         }
+//     }
+//     return array;
+// }
+
+// void Print3DArray(int [,,] array)
+// {
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (1); j++)
+//         {
+//             for (int f = 0; f < array.GetLength (2); f++)
+//             {
+//                 System.Console.Write (array[i,j,f] + $"({i},{j},{f}) ");
+//             }
+//             System.Console.WriteLine();
+//         }
+//     }
+// }
+
+// System.Console.Write ("Input number of rows in array ");
+// int m = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number of columns in array ");
+// int n = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number of layers in array ");
+// int l = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input min value of number in array ");
+// int minValue = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input max value of number in array ");
+// int maxValue = Convert.ToInt32 (Console.ReadLine());
+
+// int[,,] myArray = Create3DArray (m, n, l, minValue, maxValue);
+// Print3DArray (myArray);
+
+
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4. 
