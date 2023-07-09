@@ -687,47 +687,75 @@
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4. 
 
 
-int[,] Spiral(int n) 
+// int[,] Spiral(int n) 
+// {
+//     int[,] myArray = new int [n, n];
+
+//     int pos = 1;
+//     int count = n;
+//     int value = -n;
+//     int sum = -1;
+
+//     while (count > 0) 
+//     {
+//         value = -1 * value / n;
+//         for (int i = 0; i < count; i++) 
+//             {
+//                 sum += value;
+//                 myArray[sum / n, sum % n] = pos++;
+//             }
+//             value *= n;
+//             count--;
+//         for (int i = 0; i < count; i++) 
+//             {
+//                 sum += value;
+//                 myArray[sum / n, sum % n] = pos++;
+//             }
+//     } 
+
+//     return myArray;
+// }
+
+// void Print2DArray(int [,] array)
+// {
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (1); j++)
+//         {
+//             System.Console.Write (array[i,j] + "  ");
+//         }
+//         System.Console.WriteLine();
+
+//     }
+// }
+
+// int [,] myArray = Spiral(4);
+// Print2DArray (myArray);
+
+
+
+// Задача 64: Задайте значение N. Напишите программу, 
+// которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+
+void FromNto1(int n) 
 {
-    int[,] myArray = new int [n, n];
-
-    int pos = 1;
-    int count = n;
-    int value = -n;
-    int sum = -1;
-
-    while (count > 0) 
-    {
-        value = -1 * value / n;
-        for (int i = 0; i < count; i++) 
-            {
-                sum += value;
-                myArray[sum / n, sum % n] = pos++;
-            }
-            value *= n;
-            count--;
-        for (int i = 0; i < count; i++) 
-            {
-                sum += value;
-                myArray[sum / n, sum % n] = pos++;
-            }
-    } 
-
-    return myArray;
-}
-
-void Print2DArray(int [,] array)
-{
-    for (int i = 0; i < array.GetLength (0); i++)
-    {
-        for (int j = 0; j < array.GetLength (1); j++)
+    if (n > 1)
         {
-            System.Console.Write (array[i,j] + "  ");
+           FromNto1 (n-1);
+           System.Console.Write (n + " ");
         }
-        System.Console.WriteLine();
-
-    }
+    else System.Console.Write (1 + " ");
 }
 
-int [,] myArray = Spiral(4);
-Print2DArray (myArray);
+System.Console.Write ("Input number N ");
+int N = Convert.ToInt32 (Console.ReadLine());
+FromNto1(N);
+
+
+
+// Задача 66: Задайте значения M и N. Напишите программу, 
+// которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+
+// Задача 68: Напишите программу вычисления функции Аккермана 
+// с помощью рекурсии. Даны два неотрицательных числа m и n.
