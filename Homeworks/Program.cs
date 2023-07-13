@@ -737,19 +737,19 @@
 // Задача 64: Задайте значение N. Напишите программу, 
 // которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
 
-void FromNto1(int n) 
-{
-    if (n > 1)
-        {
-           FromNto1 (n-1);
-           System.Console.Write (n + " ");
-        }
-    else System.Console.Write (1 + " ");
-}
+// void FromNto1(int n) 
+// {
+//     if (n > 1)
+//         {
+//            FromNto1 (n-1);
+//            System.Console.Write (n + " ");
+//         }
+//     else System.Console.Write (1 + " ");
+// }
 
-System.Console.Write ("Input number N ");
-int N = Convert.ToInt32 (Console.ReadLine());
-FromNto1(N);
+// System.Console.Write ("Input number N ");
+// int N = Convert.ToInt32 (Console.ReadLine());
+// FromNto1(N);
 
 
 
@@ -757,5 +757,39 @@ FromNto1(N);
 // которая найдёт сумму натуральных элементов в промежутке от M до N.
 
 
+// int SumFromMtoN(int M, int N)
+// {
+//     if (M == N)
+//     {
+//         return M;
+//     }
+//     return SumFromMtoN(M, N - 1) + N;
+// }
+
+// System.Console.Write ("Input number M ");
+// int M = Convert.ToInt32 (Console.ReadLine());
+// System.Console.Write ("Input number N ");
+// int N = Convert.ToInt32 (Console.ReadLine());
+
+// System.Console.Write ($"M = {M}; N = {N} -> {SumFromMtoN(M, N)}");
+
+// M = 1; N = 15 -> 120
+
 // Задача 68: Напишите программу вычисления функции Аккермана 
 // с помощью рекурсии. Даны два неотрицательных числа m и n.
+
+
+
+int Akkerman(int m, int n)
+{
+  if (m == 0) return n + 1;
+  else if (n == 0) return Akkerman(m - 1, 1);
+  else return Akkerman(m - 1, Akkerman(m, n - 1));
+}
+
+System.Console.Write ("Input number m ");
+int m = Convert.ToInt32 (Console.ReadLine());
+System.Console.Write ("Input number n ");
+int n = Convert.ToInt32 (Console.ReadLine());
+
+System.Console.Write($"m = {m}, n = {n} -> A({m},{n}) = {Akkerman(m,n)}");

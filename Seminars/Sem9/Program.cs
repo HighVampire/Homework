@@ -60,26 +60,26 @@
 
 // FromMtoN(M, N);
 
-// void FindNumbres(int m, int n) 
-// {
-//     if (m != n )
-//     {
-//         if (m < n )
-//         {
-//            FindNumbres(m,n-1);
-//            System.Console.Write(n + " ");
-//         }
-//         else
-//         {
-//             System.Console.Write(m + " ");
-//             FindNumbres(m-1,n);
-//         }
-//     }
-//     else System.Console.Write(n + " ");
+void FindNumbres(int m, int n) 
+{
+    if (m != n )
+    {
+        if (m < n )
+        {
+           FindNumbres(m,n-1);
+           System.Console.Write(n + " ");
+        }
+        else
+        {
+            System.Console.Write(m + " ");
+            FindNumbres(m-1,n);
+        }
+    }
+    else System.Console.Write(n + " ");
 
     
-// }
-// FindNumbres(10,2);
+}
+FindNumbres(3,15);
 
 //Задача 4.Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
 
